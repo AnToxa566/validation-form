@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap');
+@import url('./reset.css');
+
+:root {
+    --purple-color: #985ACE;
+    --input-text-color: #403A4B;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+
+    /* width: 100vw;
+    height: 100vh; */
+
+    padding: 3rem;
+
+    background-color: var(--purple-color);
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.header {
+    font-weight: 800;
+    font-size: 5rem;
+
+    color: white;
+    text-align: center;
+
+    margin-bottom: 3rem;
+
+    text-shadow: 0px 10px 7px rgba(0, 0, 0, 0.25);
+}
+
+.modal {
+    padding: 4rem;
+
+    width: 100%;
+    max-width: 30rem;
+
+    border-radius: 2rem;
+    background-color: white;
+    box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.17);
+}
+
+.modal__header {
+    display: flex;
+
+    text-transform: uppercase;
+    font-weight: 700;
+
+    margin-bottom: 3rem;
+}
+
+.modal__header-login,
+.modal__header-reg {
+    cursor: pointer;
+}
+
+.modal__header-login {
+    margin-right: 1rem;
+}
+
+.modal__header--active {
+    color: var(--purple-color);
+}
+
+.modal__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal__form-input {
+    width: 100%;
+
+    background-color: #F8F1FF;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+
+    font-size: 0.85rem;
+    color: var(--input-text-color);
+
+    padding: 1rem 1.15rem;
+    margin-bottom: 0.65rem;
+}
+
+.modal__form-input:focus {
+    outline: none;
+    border: 1px solid var(--purple-color);
+}
+
+.modal__form-input:last-of-type {
+    margin-bottom: 3rem;
+}
+
+.modal__form-submit {
+    cursor: pointer;
+    width: 100%;
+
+    font-weight: 700;
+    font-size: 0.85rem;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    padding: 0.85rem 0;
+
+    color: white;
+    background-color: var(--purple-color);
+
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.modal__divider {
+    display: block;
+    width: 100%;
+
+    margin: 1.5rem 0;
+
+    opacity: 0.5;
+    border-bottom: 1px solid #000000;
+}
+
+.google-singup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    font-size: 0.85rem;
+
+    text-align: center;
+    text-decoration: none;
+
+    padding: 0.85rem 0;
+
+    color: black;
+
+    border-radius: 0.5rem;
+    border: 1px solid var(--purple-color);
+}
+
+.google-singup__img {
+    width: 20px;
+    height: 20px;
+
+    margin-right: 1rem;
+}
