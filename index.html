@@ -13,13 +13,52 @@
     <body>
         <h1 class="header">Login and Registration Form</h1>
 
+
+        <!-- Login Modal -->
+
         <div class="modal">
+            <div class="modal__header">
+                <div class="modal__header-login modal__header--active">Login</div>
+                <div class="modal__header-reg">Sing up</div>
+            </div>
+
+            <form class="modal__form modal__form--login">
+                <input class="modal__form-input" type="email" placeholder="E-mail" name="email" id="email">
+                <input class="modal__form-input" type="password" placeholder="Password" name="password" id="password">
+
+                <label class="modal__form-check modal__form-check--unchecked">
+                    <input type="checkbox" name="rememder" id="rememder">
+                    Remember me
+                </label>
+
+                <button class="modal__form-submit" type="submit">Login</button>
+            </form>
+
+            <span class="modal__divider"></span>
+
+            <a class="modal__forgot">
+                Forgot your password?
+            </a>
+
+            <a href="#" class="google-singup">
+                <img class="google-singup__img" src="./assets/img/google-icon.png" alt="Google icon">
+
+                <span class="google-singup__content">
+                    Continue with <span class="bold">Google</span>
+                </span>
+            </a>
+        </div>
+
+
+        <!-- Singup Modal -->
+
+        <div class="modal d-none">
             <div class="modal__header">
                 <div class="modal__header-login">Login</div>
                 <div class="modal__header-reg modal__header--active">Sing up</div>
             </div>
 
-            <form class="modal__form">
+            <form class="modal__form modal__form--singup">
                 <input class="modal__form-input" type="text" placeholder="First name" name="first_name" id="first_name">
                 <input class="modal__form-input" type="text" placeholder="Last name" name="last_name" id="last_name">
                 <input class="modal__form-input" type="email" placeholder="E-mail" name="email" id="email">
