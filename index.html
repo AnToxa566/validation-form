@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./assets/styles/style.css">
 
         <title>Login and Registration Form</title>
     </head>
@@ -16,31 +16,31 @@
 
         <!-- Login Modal -->
 
-        <div class="modal">
+        <div class="modal" id="modal__login">
             <div class="modal__header">
                 <div class="modal__header-login modal__header--active">Login</div>
                 <div class="modal__header-reg">Sing up</div>
             </div>
 
-            <form class="modal__form modal__form--login">
-                <input class="modal__form-input" type="email" placeholder="E-mail" name="email" id="email">
-                <input class="modal__form-input" type="password" placeholder="Password" name="password" id="password">
+            <form class="modal__form modal__form--login" id="login-form">
+                <input class="modal__form-input" type="email" placeholder="E-mail*" name="email" id="login_email" required pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+">
+                <input class="modal__form-input" type="password" placeholder="Password*" name="password" id="login_password" required minlength="8" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$">
 
                 <label class="modal__form-check modal__form-check--unchecked">
                     <input type="checkbox" name="rememder" id="rememder">
                     Remember me
                 </label>
 
-                <button class="modal__form-submit" type="submit">Login</button>
+                <button class="modal__form-submit" type="submit" id="login_submit">Login</button>
             </form>
 
             <span class="modal__divider"></span>
 
-            <a class="modal__forgot">
+            <a href="#" class="modal__forgot" data-feat="none">
                 Forgot your password?
             </a>
 
-            <a href="#" class="google-singup">
+            <a href="#" class="google-singup" data-feat="none">
                 <img class="google-singup__img" src="./assets/img/google-icon.png" alt="Google icon">
 
                 <span class="google-singup__content">
@@ -52,25 +52,25 @@
 
         <!-- Singup Modal -->
 
-        <div class="modal d-none">
+        <div class="modal d-none" id="modal__singup">
             <div class="modal__header">
                 <div class="modal__header-login">Login</div>
                 <div class="modal__header-reg modal__header--active">Sing up</div>
             </div>
 
-            <form class="modal__form modal__form--singup">
-                <input class="modal__form-input" type="text" placeholder="First name" name="first_name" id="first_name">
-                <input class="modal__form-input" type="text" placeholder="Last name" name="last_name" id="last_name">
-                <input class="modal__form-input" type="email" placeholder="E-mail" name="email" id="email">
-                <input class="modal__form-input" type="password" placeholder="Password" name="password" id="password">
-                <input class="modal__form-input" type="password" placeholder="Confirm password" name="confirm_password" id="confirm_password">
+            <form class="modal__form modal__form--singup" id="singup-form">
+                <input class="modal__form-input" type="text" placeholder="First name*" name="first_name" id="first_name" data-input="name" required pattern="^[A-Za-z]{2,30}$" minlength="2" maxlength="30">
+                <input class="modal__form-input" type="text" placeholder="Last name*" name="last_name" id="last_name" data-input="name" required pattern="^[A-Za-z]{2,30}$" minlength="2" maxlength="30">
+                <input class="modal__form-input" type="email" placeholder="E-mail*" name="email" id="singup_email" required pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+">
+                <input class="modal__form-input singup__password" type="password" placeholder="Password*" name="password" id="singup_password" required pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$">
+                <input class="modal__form-input" type="password" placeholder="Confirm password*" name="confirm_password" id="singup_confirm_password" required pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$">
 
-                <button class="modal__form-submit" type="submit">Sing up</button>
+                <button class="modal__form-submit" type="submit" id="singup_submit">Sing up</button>
             </form>
 
             <span class="modal__divider"></span>
 
-            <a href="#" class="google-singup">
+            <a href="#" class="google-singup" data-feat="none">
                 <img class="google-singup__img" src="./assets/img/google-icon.png" alt="Google icon">
 
                 <span class="google-singup__content">
@@ -78,5 +78,7 @@
                 </span>
             </a>
         </div>
+
+        <script src="./app.js"></script>
     </body>
 </html>
