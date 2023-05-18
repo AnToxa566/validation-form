@@ -42,6 +42,8 @@ body {
     font-weight: 800;
     font-size: 5rem;
 
+    line-height: 120%;
+
     color: white;
     text-align: center;
 
@@ -218,7 +220,7 @@ body {
     text-align: center;
     text-decoration: none;
 
-    padding: 0.85rem 0;
+    padding: 0.85rem 1rem;
 
     color: black;
 
@@ -231,4 +233,24 @@ body {
     height: 20px;
 
     margin-right: 1rem;
+}
+
+@media screen and (max-width: 570px) {
+    .header {
+        font-size: 3.5rem;
+    }
+
+    .modal {
+        padding: 3rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .header {
+        font-size: 2.8rem;
+    }
+
+    .modal {
+        padding: 2rem;
+    }
 }
