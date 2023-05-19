@@ -236,6 +236,10 @@ body {
 }
 
 @media screen and (max-width: 570px) {
+    body {
+        padding: 2rem;;
+    }
+
     .header {
         font-size: 3.5rem;
     }
@@ -246,6 +250,10 @@ body {
 }
 
 @media screen and (max-width: 400px) {
+    body {
+        padding: 1.5rem;;
+    }
+
     .header {
         font-size: 2.8rem;
     }
