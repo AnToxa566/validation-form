@@ -18,18 +18,18 @@
 
         <div class="modal" id="modal__login">
             <div class="modal__header">
-                <div class="modal__header-login modal__header--active">Login</div>
-                <div class="modal__header-reg">Sing up</div>
+                <a href="#" class="modal__header-login modal__header--active">Login</a>
+                <a href="#"     class="modal__header-reg">Sing up</a>
             </div>
 
             <form class="modal__form modal__form--login" id="login-form">
                 <input class="modal__form-input" type="email" placeholder="E-mail*" name="email" id="login_email" required pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+">
                 <input class="modal__form-input" type="password" placeholder="Password*" name="password" id="login_password" required minlength="8" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$">
 
-                <label class="modal__form-check modal__form-check--unchecked">
+                <a href="#" class="modal__form-check modal__form-check--unchecked">
                     <input type="checkbox" name="rememder" id="rememder">
                     Remember me
-                </label>
+                </a>
 
                 <button class="modal__form-submit" type="submit" id="login_submit">Login</button>
             </form>
@@ -54,8 +54,8 @@
 
         <div class="modal d-none" id="modal__singup">
             <div class="modal__header">
-                <div class="modal__header-login">Login</div>
-                <div class="modal__header-reg modal__header--active">Sing up</div>
+                <a href="#" class="modal__header-login">Login</a>
+                <a href="#" class="modal__header-reg modal__header--active">Sing up</a>
             </div>
 
             <form class="modal__form modal__form--singup" id="singup-form">

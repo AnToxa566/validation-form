@@ -78,6 +78,8 @@ body {
 .modal__header-login,
 .modal__header-reg {
     cursor: pointer;
+    text-decoration: none;
+    color: black;
 }
 
 .modal__header-login {
@@ -119,12 +121,14 @@ body {
 
 .modal__form-check {
     cursor: pointer;
+    text-decoration: none;
     position: relative;
 
     display: flex;
     align-items: center;
 
     font-weight: 500;
+    color: black;
 
     margin: 1.5rem 0 1.5rem 2rem;
 }
